@@ -222,6 +222,92 @@ input {
   background: #0FC1A7;
 }
 
+/* line 1, src/sass/components/_feedback.scss */
+.feedback {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  background: #0FC1A7;
+  padding: 50px 15px 40px;
+}
+
+/* line 7, src/sass/components/_feedback.scss */
+.feedback-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 11, src/sass/components/_feedback.scss */
+.feedback-item {
+  max-width: 290px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 32, src/sass/components/_feedback.scss */
+.feedback-text {
+  text-align: center;
+}
+
+/* line 36, src/sass/components/_feedback.scss */
+.feedback-icon {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 2, src/sass/components/_socials.scss */
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 7, src/sass/components/_socials.scss */
+.socials-item + .socials-item {
+  margin-left: 15px;
+}
+
+/* line 12, src/sass/components/_socials.scss */
+.socials-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 20, src/sass/components/_socials.scss */
+.socials-link:hover {
+  opacity: 1;
+}
+
+/* line 24, src/sass/components/_socials.scss */
+.socials-link:hover > .socials-icon {
+  opacity: 0.25;
+}
+
+/* line 29, src/sass/components/_socials.scss */
+.socials-icon {
+  margin: auto;
+}
+
 /* line 1, src/sass/layout/_header.scss */
 .header {
   position: absolute;
@@ -245,6 +331,75 @@ input {
       -ms-flex-align: center;
           align-items: center;
   height: 65px;
+}
+
+/* line 1, src/sass/layout/_footer.scss */
+.footer {
+  position: relative;
+  padding: 150px 0 25px;
+  background: #2A2E5B;
+}
+
+/* line 7, src/sass/layout/_footer.scss */
+.footer-inner {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 13, src/sass/layout/_footer.scss */
+.footer-info {
+  margin-right: 150px;
+}
+
+/* line 17, src/sass/layout/_footer.scss */
+.footer-logo {
+  margin-bottom: 45px;
+}
+
+/* line 21, src/sass/layout/_footer.scss */
+.footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 25, src/sass/layout/_footer.scss */
+.footer-item {
+  min-width: 130px;
+}
+
+/* line 28, src/sass/layout/_footer.scss */
+.footer-item + .footer-item {
+  margin-left: 75px;
+}
+
+/* line 33, src/sass/layout/_footer.scss */
+.footer-title {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* line 41, src/sass/layout/_footer.scss */
+.footer-subitem + .footer-subitem {
+  margin-top: 10px;
+}
+
+/* line 46, src/sass/layout/_footer.scss */
+.footer-link {
+  color: #ffffff;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+/* line 51, src/sass/layout/_footer.scss */
+.footer-link:hover {
+  opacity: 1;
 }
 
 /* line 1, src/sass/layout/_banner.scss */

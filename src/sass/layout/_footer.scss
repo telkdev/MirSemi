@@ -1,0 +1,55 @@
+.footer {
+    position: relative;
+
+    padding: 150px 0 25px;
+    background: $blue01;
+
+    &-inner {
+        @include site-width;
+
+        display: flex;
+    }
+
+    &-info {
+        margin-right: 150px;
+    }
+
+    &-logo {
+        margin-bottom: 45px;
+    }
+
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        min-width: 130px;
+        
+        &+& {
+            margin-left: 75px;
+        }
+    }
+
+    &-title {
+        color: $white01;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    &-subitem {
+        &+& {
+            margin-top: 10px;
+        }
+    }
+
+    &-link {
+        color: $white01;
+        font-size: 16px;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

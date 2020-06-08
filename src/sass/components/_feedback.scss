@@ -1,0 +1,42 @@
+.feedback {
+    @include site-width;
+
+    background: $green01;
+    padding: 50px 15px 40px;
+
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        max-width: 290px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // & + & {
+        //     &::before {
+        //         content: '';
+
+        //         width: 1px;
+        //         height: 75px;
+        //         background: $white01;
+        //         position: absolute;
+        //         left: 0;
+        //         top: 10px;
+        //     }
+        // }
+    }
+
+    &-text {
+        text-align: center;
+    }
+
+    &-icon {
+        fill: $white01;
+
+        width: 24px;
+        height: 24px;
+    }
+}

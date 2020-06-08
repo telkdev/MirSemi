@@ -1,0 +1,32 @@
+.socials {
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        & + & {
+            margin-left: 15px ;
+        }
+    }
+
+    &-link {
+        @include size-circle(32px);
+
+        background: $white01;
+        opacity: 0.3;
+        transition: opacity $animation-speed;
+        display: flex;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:hover > .socials-icon {
+            opacity: 0.25;
+        }
+    }
+
+    &-icon {
+        margin: auto;
+    }
+}
