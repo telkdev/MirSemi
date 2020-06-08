@@ -1,0 +1,25 @@
+.banner {
+    background-color: rgb(24, 30, 41);
+
+    &-inner {
+        @include site-width;
+
+        padding: 175px 0 125px;
+    }
+
+    &-title {
+        font-size: 50px;
+        color: $white01;
+        font-weight: 400;
+
+        &::before {
+            content: '';
+
+            margin-right: 30px;
+            width: 4px;
+            background: $green01;
+            height: 70px;
+            display: inline-block;
+        }
+    }
+}

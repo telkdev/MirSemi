@@ -1,0 +1,16 @@
+.header {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+
+
+    &-inner {
+        @include site-width;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+    }
+}

@@ -1,0 +1,47 @@
+%checkbox {
+    @extend %visually-hidden;
+
+    &:checked~&-label::after {
+        opacity: 1;
+    }
+
+    &-field {
+        position: relative;
+        padding-left: 25px;
+
+        & +& {
+            margin-top: 10px;
+        }
+    }
+
+    &-label {
+        font-size: 13px;
+        color: $black01;
+
+        &::before {
+            @include size(16px);
+
+            content: '';
+
+            border: 1px solid $black01-opacity;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: $white01;
+        }
+ 
+        &::after {
+            @include size-circle(6px);
+
+            content: '';
+
+            background: $green01;
+            opacity: 0;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            z-index: 1;
+        }
+
+    }
+}

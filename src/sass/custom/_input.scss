@@ -1,0 +1,17 @@
+%input {
+    padding: 0 30px 0 10px;
+    font-size: 13px;
+    line-height: 32px;
+    border: 1px solid $grey03;
+    color: $black01;
+    transition: border $animation-speed;
+
+    &::placeholder {
+        color: $black01-opacity;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $blue01;
+    }
+}

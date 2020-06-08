@@ -1,0 +1,36 @@
+ // Colors
+ $white01: #ffffff; //on socials opacity 0.3
+
+ $black01: #353E3D;
+ $black01-opacity: rgba(53, 62, 61, 0.5);
+
+ $grey01: #F9F9FE;
+ $grey02: #353E3D; //opacity 0.6(select menu)
+ $grey03: #E5E5E5;
+ ; //inputs border
+ $grey04: #D6D6D6; // border page nav
+
+ $green01: #0FC1A7;
+
+ $blue01: #2A2E5B;
+
+ // Sizes
+ $base-font-size: 16px;
+ $content-size: 1024px;
+
+ // Fonts
+ $fontName: 'Roboto',
+ sans-serif;
+
+ $font-base: $fontName;
+
+ // Animations
+ $animation-speed: 0.25s linear;
+
+ // Urls
+ $imgGen: '../images/general/';
+ $imgCont: '/images/';
+
+ // Shadow
+ $shadowGrey: 0px 1px 5px rgba(60, 129, 243, 0.2);
+ $shadowBlue: 0px 0px 10px rgba(137, 179, 247, 0.2);

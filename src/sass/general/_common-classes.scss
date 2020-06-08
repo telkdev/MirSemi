@@ -1,0 +1,26 @@
+%main-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+%content {
+    flex: 1 0 auto;
+    padding: 60px 0;
+}
+
+.visuallyHidden,
+  %visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+
+%disabled {
+    pointer-events: none;
+    user-select: none;
+    color: darkgray;
+}
