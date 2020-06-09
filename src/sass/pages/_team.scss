@@ -1,3 +1,357 @@
 .team {
     @extend %content;
+
+    &-inner {
+        @include site-width;
+
+        padding: 20px 0 155px;
+    }
+
+    &-content {
+        display: flex;
+    }
+
+    &-main {
+        max-width: 870px;
+        width: 100%;
+        margin-right: 35px;
+    }
+
+    &-filter {
+        max-width: 265px;
+        width: 100%;
+        align-self: baseline;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: rgb(249, 249, 254);
+        margin-bottom: 60px;
+
+        &-icon {
+            margin-right: 20px;
+        }
+
+        &-actions {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        &-filter {
+            margin-right: 20px;
+
+            &-wrapper {
+                display: flex;
+            }
+        }
+
+        &-text {
+            font-size: 13px;
+            color: $grey02;
+            margin-right: 10px;
+        }
+    }
+
+    &-count {
+        &-text {
+            color: $grey02;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+    }
+
+    // ASIDE
+    &-filter {
+        padding: 15px 15px 35px;
+        border: 1px solid $grey03;
+    }
+
+    &-form {
+        &-title {
+            @extend %title;
+
+            padding-right: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-input {
+        @extend %input;
+
+        max-width: 105px;
+
+        &+& {
+            margin-left: 20px;
+        }
+
+        &-field {
+            display: flex;
+            margin-bottom: 35px;
+        }
+    }
+
+    &-radio {
+        &-wrapper {
+            &+& {
+                margin-top: 30px;
+            }
+
+            &--last {
+                padding-bottom: 15px;
+                border-bottom: 1px solid $grey04;
+                margin-bottom: 25px;
+            }
+        }
+
+        &-field {
+            @extend %radio-field;
+        }
+
+        &-label {
+            @extend %radio-label;
+        }
+
+        &-input {
+            @extend %radio;
+        }
+
+        &-title {
+            @extend %title;
+
+            margin-bottom: 25px;
+        }
+    }
+
+    &-checkbox {
+        &-wrapper {
+            margin-bottom: 30px;
+        }
+
+        &-field {
+            @extend %checkbox-field;
+        }
+
+        &-label {
+            @extend %checkbox-label;
+        }
+
+        &-input {
+            @extend %checkbox;
+        }
+
+        &-title {
+            @extend %title;
+
+            margin-bottom: 25px;
+        }
+    }
+
+    &-submit {
+        @extend %button;
+    }
+
+    // ITEM
+    &-item {
+        padding: 40px 0 30px;
+        display: flex;
+
+        &+& {
+            border-top: 1px solid $grey04;
+        }
+    }
+
+    &-info {
+        flex-shrink: 0;
+        margin-right: 35px;
+    }
+
+    &-image {
+        &-wrapper {
+            position: relative;
+            max-width: 265px;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+            }
+
+            &:hover,
+            &.act {
+
+                &>.team-socials {
+                    margin-top: -70px;
+                }
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-socials {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        transition: margin $animation-speed;
+
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+
+        &-item {
+            &+& {
+                margin-left: 15px;
+            }
+        }
+
+        &-link {
+            @include size-circle(44px);
+
+            background: $white01;
+            opacity: 0.3;
+            transition: opacity $animation-speed;
+            display: flex;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:hover>.socials-icon {
+                opacity: 0.25;
+            }
+        }
+
+        &-icon {
+            fill: $white01;
+        }
+    }
+
+    &-stats {
+        padding: 0 20px;
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-key {
+            color: $black01;
+            opacity: 0.6;
+            font-size: 13px;
+        }
+
+        &-value {
+            font-size: 16px;
+            line-height: 26px;
+            color: $black01;
+            font-weight: 600;
+        }
+    }
+
+    &-position {
+        color: $green01;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    &-title {
+        @extend %title;
+
+        margin-bottom: 15px;
+    }
+
+    &-description {
+        font-size: 14px;
+        color: $black01;
+        line-height: 18px;
+        margin-bottom: 15px;
+        opacity: 0.7;
+    }
+
+    &-price {
+        margin-bottom: 20px;
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            & + & {
+                margin-left: 25px;
+            }
+        }
+
+        &-icon {
+            margin-right: 10px;
+            fill: $green01;
+            width: 15px;
+            height: 15px;
+        }
+
+        &-count {
+            font-size: 16px;
+            color: $black01;
+            font-weight: 600;
+        }
+    }
+
+    &-tags {
+        margin-bottom: 40px;
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            background: $grey01;
+            margin-bottom: 20px;
+
+            & + & {
+                margin-left: 5px;
+            }
+        }
+
+        &-link {
+            color: $black01;
+            opacity: 0.6;
+            font-size: 13px;
+            transition: opacity $animation-speed;
+            padding: 5px;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-link {
+        @extend %button;
+    }
+
 }

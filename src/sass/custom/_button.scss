@@ -1,0 +1,19 @@
+%button {
+    border: 1px solid $green01;
+    border-radius: 10px;
+    line-height: 38px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $grey02;
+    letter-spacing: 0.33px;
+    padding: 0 65px;
+    transition: color $animation-speed, border $animation-speed, background-color $animation-speed;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $green01;
+        border-color: $grey02;
+        color: $white01;
+    }
+}

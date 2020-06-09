@@ -1,0 +1,14 @@
+.icon {
+    &-facebook {
+        @include size(14px, 26px);
+
+        fill: $white01;
+    }
+
+    &-menu {
+        @include size(15px, 13px);
+
+        opacity: 0.5;
+        fill: $grey02;
+    }
+}

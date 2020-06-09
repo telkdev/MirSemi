@@ -1,0 +1,31 @@
+<svg class="team-price-icon" xmlns="http://www.w3.org/2000/svg" width="15"
+												height="15" viewBox="0 0 15 15">
+												<defs>
+													<style>
+														.a {
+															fill: #0fc1a7;
+															stroke: #fff;
+														}
+
+														.b {
+															stroke: none;
+														}
+
+														.c {
+															fill: none;
+														}
+													</style>
+												</defs>
+												<g transform="translate(-885 -2582)">
+													<g class="a" transform="translate(889 2583)">
+														<circle class="b" cx="3.5" cy="3.5" r="3.5" />
+														<circle class="c" cx="3.5" cy="3.5" r="4" />
+													</g>
+													<g class="a" transform="translate(886 2591)">
+														<path class="b"
+															d="M4,0H9a4,4,0,0,1,4,4V5a0,0,0,0,1,0,0H0A0,0,0,0,1,0,5V4A4,4,0,0,1,4,0Z" />
+														<path class="c"
+															d="M4-.5H9A4.5,4.5,0,0,1,13.5,4V5a.5.5,0,0,1-.5.5H0A.5.5,0,0,1-.5,5V4A4.5,4.5,0,0,1,4-.5Z" />
+													</g>
+												</g>
+											</svg>

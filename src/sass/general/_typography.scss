@@ -1,4 +1,4 @@
-%title {
+%main-title {
     font-size: 20px;
     line-height: 30px;
     color: $black01;
@@ -11,4 +11,10 @@
     line-height: 20px;
     color: $black01;
     font-weight: 400;
+}
+
+%title {
+    font-size: 16px;
+    color: rgb(53, 62, 61);
+    line-height: 21px;
 }

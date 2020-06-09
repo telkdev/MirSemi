@@ -3,6 +3,10 @@
 
     background: $green01;
     padding: 50px 15px 40px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     &-list {
         display: flex;
@@ -14,23 +18,33 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 25px;
+        position: relative;
 
-        // & + & {
-        //     &::before {
-        //         content: '';
+        &+& {
+            &::before {
+                content: '';
 
-        //         width: 1px;
-        //         height: 75px;
-        //         background: $white01;
-        //         position: absolute;
-        //         left: 0;
-        //         top: 10px;
-        //     }
-        // }
+                width: 1px;
+                height: 75px;
+                background: $white01;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
     }
 
     &-text {
         text-align: center;
+        color: $white01;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    &--highlight {
+        display: block;
+        margin-bottom: 5px;
     }
 
     &-icon {
@@ -38,5 +52,15 @@
 
         width: 24px;
         height: 24px;
+        margin-bottom: 20px;
+    }
+
+    &-link {
+        color: $white01;
+        font-size: 16px;
+
+        &+& {
+            margin-top: 10px;
+        }
     }
 }

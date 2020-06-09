@@ -1,9 +1,23 @@
 .banner {
-    background-color: rgb(24, 30, 41);
+    background: url('/images/banner.png') center/cover no-repeat;
+    position: relative;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
 
     &-inner {
         @include site-width;
 
+        position: relative;
+        z-index: 1;
         padding: 175px 0 125px;
     }
 

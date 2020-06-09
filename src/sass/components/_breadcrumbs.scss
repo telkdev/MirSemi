@@ -1,0 +1,37 @@
+.breadcrumbs {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $grey04;
+    margin-bottom: 60px;
+
+    &-list {
+        display: flex;
+        align-items: center;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+
+        & + & {
+            &::before {
+                content: '';
+
+                @include size-circle(5px);
+                background: $grey02;
+                margin: 0 15px;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &-link {
+        color: $grey02;
+        font-size: 13px;
+        opacity: 0.6;
+        transition: opacity $animation-speed;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+}

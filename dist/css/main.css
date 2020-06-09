@@ -1,15 +1,186 @@
 /*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
 @charset "UTF-8";
+/* line 4, src/sass/custom/_checkbox.scss */
+.team-checkbox-input:checked ~ .team-checkbox-label::after {
+  opacity: 1;
+}
+
+/* line 8, src/sass/custom/_checkbox.scss */
+.team-checkbox-field {
+  position: relative;
+  padding-left: 25px;
+}
+
+/* line 12, src/sass/custom/_checkbox.scss */
+.team-checkbox-field + .team-checkbox-field {
+  margin-top: 10px;
+}
+
+/* line 17, src/sass/custom/_checkbox.scss */
+.team-checkbox-label {
+  font-size: 13px;
+  color: #353E3D;
+}
+
+/* line 21, src/sass/custom/_checkbox.scss */
+.team-checkbox-label::before {
+  width: 16px;
+  height: 16px;
+  content: '';
+  border: 1px solid rgba(53, 62, 61, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+}
+
+/* line 33, src/sass/custom/_checkbox.scss */
+.team-checkbox-label::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  content: '';
+  background: #0FC1A7;
+  opacity: 0;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 1;
+}
+
+/* line 4, src/sass/custom/_radio.scss */
+.team-radio-input:checked ~ .team-radio-label::after {
+  opacity: 1;
+}
+
+/* line 8, src/sass/custom/_radio.scss */
+.team-radio-field {
+  position: relative;
+  padding-left: 25px;
+}
+
+/* line 12, src/sass/custom/_radio.scss */
+.team-radio-field + .team-radio-field {
+  margin-top: 10px;
+}
+
+/* line 17, src/sass/custom/_radio.scss */
+.team-radio-label {
+  font-size: 13px;
+  color: #353E3D;
+}
+
+/* line 21, src/sass/custom/_radio.scss */
+.team-radio-label::before {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  content: '';
+  border: 1px solid rgba(53, 62, 61, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+}
+
+/* line 33, src/sass/custom/_radio.scss */
+.team-radio-label::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  content: '';
+  background: #0FC1A7;
+  opacity: 0;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 1;
+}
+
+/* line 1, src/sass/custom/_input.scss */
+.search-input, .team-input {
+  padding: 0 30px 0 10px;
+  font-size: 13px;
+  line-height: 32px;
+  border: 1px solid #E5E5E5;
+  color: #353E3D;
+  -webkit-transition: border 0.25s linear;
+  transition: border 0.25s linear;
+  background: #ffffff;
+}
+
+/* line 10, src/sass/custom/_input.scss */
+.search-input::-webkit-input-placeholder, .team-input::-webkit-input-placeholder {
+  color: rgba(53, 62, 61, 0.5);
+}
+.search-input::-moz-placeholder, .team-input::-moz-placeholder {
+  color: rgba(53, 62, 61, 0.5);
+}
+.search-input:-ms-input-placeholder, .team-input:-ms-input-placeholder {
+  color: rgba(53, 62, 61, 0.5);
+}
+.search-input::-ms-input-placeholder, .team-input::-ms-input-placeholder {
+  color: rgba(53, 62, 61, 0.5);
+}
+.search-input::placeholder, .team-input::placeholder {
+  color: rgba(53, 62, 61, 0.5);
+}
+
+/* line 14, src/sass/custom/_input.scss */
+.search-input:hover, .team-input:hover, .search-input:focus, .team-input:focus {
+  border-color: #2A2E5B;
+}
+
+/* line 2, src/sass/custom/_icons.scss */
+.icon-facebook {
+  width: 14px;
+  height: 26px;
+  fill: #ffffff;
+}
+
+/* line 8, src/sass/custom/_icons.scss */
+.icon-menu {
+  width: 15px;
+  height: 13px;
+  opacity: 0.5;
+  fill: #353E3D;
+}
+
+/* line 1, src/sass/custom/_button.scss */
+.team-submit, .team-link {
+  border: 1px solid #0FC1A7;
+  border-radius: 10px;
+  line-height: 38px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #353E3D;
+  letter-spacing: 0.33px;
+  padding: 0 65px;
+  -webkit-transition: color 0.25s linear, border 0.25s linear, background-color 0.25s linear;
+  transition: color 0.25s linear, border 0.25s linear, background-color 0.25s linear;
+}
+
+/* line 12, src/sass/custom/_button.scss */
+.team-submit:hover, .team-link:hover, .team-submit:active, .team-link:active, .team-submit:focus, .team-link:focus {
+  background: #0FC1A7;
+  border-color: #353E3D;
+  color: #ffffff;
+}
+
 /* line 7, src/sass/general/_common-classes.scss */
 .team {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 60px 0;
 }
 
-/* line 12, src/sass/general/_common-classes.scss */
-.visuallyHidden {
+/* line 11, src/sass/general/_common-classes.scss */
+.visuallyHidden,
+.team-checkbox-input,
+.team-radio-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -186,6 +357,13 @@ input {
   background: transparent;
 }
 
+/* line 16, src/sass/general/_typography.scss */
+.team-form-title, .team-radio-title, .team-checkbox-title, .team-title {
+  font-size: 16px;
+  color: #353e3d;
+  line-height: 21px;
+}
+
 /* line 2, src/sass/components/_logo.scss */
 .logo-link {
   width: 185px;
@@ -229,16 +407,21 @@ input {
   margin: 0 auto;
   background: #0FC1A7;
   padding: 50px 15px 40px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-/* line 7, src/sass/components/_feedback.scss */
+/* line 11, src/sass/components/_feedback.scss */
 .feedback-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 11, src/sass/components/_feedback.scss */
+/* line 15, src/sass/components/_feedback.scss */
 .feedback-item {
   max-width: 290px;
   width: 100%;
@@ -252,18 +435,52 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 25px;
+  position: relative;
 }
 
-/* line 32, src/sass/components/_feedback.scss */
+/* line 25, src/sass/components/_feedback.scss */
+.feedback-item + .feedback-item::before {
+  content: '';
+  width: 1px;
+  height: 75px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 38, src/sass/components/_feedback.scss */
 .feedback-text {
   text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
 }
 
-/* line 36, src/sass/components/_feedback.scss */
+/* line 45, src/sass/components/_feedback.scss */
+.feedback--highlight {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 50, src/sass/components/_feedback.scss */
 .feedback-icon {
   fill: #ffffff;
   width: 24px;
   height: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 58, src/sass/components/_feedback.scss */
+.feedback-link {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* line 62, src/sass/components/_feedback.scss */
+.feedback-link + .feedback-link {
+  margin-top: 10px;
 }
 
 /* line 2, src/sass/components/_socials.scss */
@@ -306,6 +523,117 @@ input {
 /* line 29, src/sass/components/_socials.scss */
 .socials-icon {
   margin: auto;
+  width: 14px;
+  height: 14px;
+}
+
+/* line 1, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D6D6D6;
+  margin-bottom: 60px;
+}
+
+/* line 6, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 11, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 16, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs-item + .breadcrumbs-item::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #353E3D;
+  margin: 0 15px;
+  opacity: 0.6;
+}
+
+/* line 27, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs-link {
+  color: #353E3D;
+  font-size: 13px;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+}
+
+/* line 33, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs-link:hover, .breadcrumbs-link:focus {
+  opacity: 1;
+}
+
+/* line 2, src/sass/components/_search.scss */
+.search-form {
+  position: relative;
+}
+
+/* line 10, src/sass/components/_search.scss */
+.search-submit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* line 2, src/sass/components/_pagination.scss */
+.pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 6, src/sass/components/_pagination.scss */
+.pagination-item {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #D6D6D6;
+  background: #ffffff;
+  -webkit-transition: background-color 0.25s linear, color 0.25s linear;
+  transition: background-color 0.25s linear, color 0.25s linear;
+}
+
+/* line 14, src/sass/components/_pagination.scss */
+.pagination-item.act, .pagination-item:hover {
+  background: #0FC1A7;
+}
+
+/* line 18, src/sass/components/_pagination.scss */
+.pagination-item.act > .pagination-link, .pagination-item:hover > .pagination-link {
+  color: #ffffff;
+}
+
+/* line 23, src/sass/components/_pagination.scss */
+.pagination-item + .pagination-item {
+  margin-left: 10px;
+}
+
+/* line 28, src/sass/components/_pagination.scss */
+.pagination-link {
+  margin: auto;
+  font-size: 13px;
+  color: #353E3D;
 }
 
 /* line 1, src/sass/layout/_header.scss */
@@ -314,9 +642,10 @@ input {
   top: 15px;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
-/* line 8, src/sass/layout/_header.scss */
+/* line 9, src/sass/layout/_header.scss */
 .header-inner {
   max-width: 1170px;
   width: 100%;
@@ -404,25 +733,39 @@ input {
 
 /* line 1, src/sass/layout/_banner.scss */
 .banner {
-  background-color: #181e29;
+  background: url("/images/banner.png") center/cover no-repeat;
+  position: relative;
 }
 
-/* line 4, src/sass/layout/_banner.scss */
+/* line 5, src/sass/layout/_banner.scss */
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 16, src/sass/layout/_banner.scss */
 .banner-inner {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
   padding: 175px 0 125px;
 }
 
-/* line 10, src/sass/layout/_banner.scss */
+/* line 24, src/sass/layout/_banner.scss */
 .banner-title {
   font-size: 50px;
   color: #ffffff;
   font-weight: 400;
 }
 
-/* line 15, src/sass/layout/_banner.scss */
+/* line 29, src/sass/layout/_banner.scss */
 .banner-title::before {
   content: '';
   margin-right: 30px;
@@ -430,4 +773,400 @@ input {
   background: #0FC1A7;
   height: 70px;
   display: inline-block;
+}
+
+/* line 4, src/sass/pages/_team.scss */
+.team-inner {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 155px;
+}
+
+/* line 10, src/sass/pages/_team.scss */
+.team-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 14, src/sass/pages/_team.scss */
+.team-main {
+  max-width: 870px;
+  width: 100%;
+  margin-right: 35px;
+}
+
+/* line 20, src/sass/pages/_team.scss */
+.team-filter {
+  max-width: 265px;
+  width: 100%;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+/* line 26, src/sass/pages/_team.scss */
+.team-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #f9f9fe;
+  margin-bottom: 60px;
+}
+
+/* line 33, src/sass/pages/_team.scss */
+.team-header-icon {
+  margin-right: 20px;
+}
+
+/* line 37, src/sass/pages/_team.scss */
+.team-header-actions {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 43, src/sass/pages/_team.scss */
+.team-header-filter {
+  margin-right: 20px;
+}
+
+/* line 46, src/sass/pages/_team.scss */
+.team-header-filter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 51, src/sass/pages/_team.scss */
+.team-header-text {
+  font-size: 13px;
+  color: #353E3D;
+  margin-right: 10px;
+}
+
+/* line 59, src/sass/pages/_team.scss */
+.team-count-text {
+  color: #353E3D;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* line 67, src/sass/pages/_team.scss */
+.team-filter {
+  padding: 15px 15px 35px;
+  border: 1px solid #E5E5E5;
+}
+
+/* line 73, src/sass/pages/_team.scss */
+.team-form-title {
+  padding-right: 30px;
+  margin-bottom: 20px;
+}
+
+/* line 81, src/sass/pages/_team.scss */
+.team-input {
+  max-width: 105px;
+}
+
+/* line 86, src/sass/pages/_team.scss */
+.team-input + .team-input {
+  margin-left: 20px;
+}
+
+/* line 90, src/sass/pages/_team.scss */
+.team-input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+/* line 98, src/sass/pages/_team.scss */
+.team-radio-wrapper + .team-radio-wrapper {
+  margin-top: 30px;
+}
+
+/* line 102, src/sass/pages/_team.scss */
+.team-radio-wrapper--last {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D6D6D6;
+  margin-bottom: 25px;
+}
+
+/* line 121, src/sass/pages/_team.scss */
+.team-radio-title {
+  margin-bottom: 25px;
+}
+
+/* line 129, src/sass/pages/_team.scss */
+.team-checkbox-wrapper {
+  margin-bottom: 30px;
+}
+
+/* line 145, src/sass/pages/_team.scss */
+.team-checkbox-title {
+  margin-bottom: 25px;
+}
+
+/* line 157, src/sass/pages/_team.scss */
+.team-item {
+  padding: 40px 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 161, src/sass/pages/_team.scss */
+.team-item + .team-item {
+  border-top: 1px solid #D6D6D6;
+}
+
+/* line 166, src/sass/pages/_team.scss */
+.team-info {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 35px;
+}
+
+/* line 172, src/sass/pages/_team.scss */
+.team-image-wrapper {
+  position: relative;
+  max-width: 265px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 178, src/sass/pages/_team.scss */
+.team-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* line 192, src/sass/pages/_team.scss */
+.team-image-wrapper:hover > .team-socials, .team-image-wrapper.act > .team-socials {
+  margin-top: -70px;
+}
+
+/* line 196, src/sass/pages/_team.scss */
+.team-image-wrapper:hover::after, .team-image-wrapper.act::after {
+  display: block;
+}
+
+/* line 203, src/sass/pages/_team.scss */
+.team-socials {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 1;
+  -webkit-transition: margin 0.25s linear;
+  transition: margin 0.25s linear;
+}
+
+/* line 211, src/sass/pages/_team.scss */
+.team-socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 217, src/sass/pages/_team.scss */
+.team-socials-item + .team-socials-item {
+  margin-left: 15px;
+}
+
+/* line 222, src/sass/pages/_team.scss */
+.team-socials-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 230, src/sass/pages/_team.scss */
+.team-socials-link:hover {
+  opacity: 1;
+}
+
+/* line 234, src/sass/pages/_team.scss */
+.team-socials-link:hover > .socials-icon {
+  opacity: 0.25;
+}
+
+/* line 239, src/sass/pages/_team.scss */
+.team-socials-icon {
+  fill: #ffffff;
+}
+
+/* line 244, src/sass/pages/_team.scss */
+.team-stats {
+  padding: 0 20px;
+}
+
+/* line 247, src/sass/pages/_team.scss */
+.team-stats-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 253, src/sass/pages/_team.scss */
+.team-stats-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* line 259, src/sass/pages/_team.scss */
+.team-stats-key {
+  color: #353E3D;
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+/* line 265, src/sass/pages/_team.scss */
+.team-stats-value {
+  font-size: 16px;
+  line-height: 26px;
+  color: #353E3D;
+  font-weight: 600;
+}
+
+/* line 273, src/sass/pages/_team.scss */
+.team-position {
+  color: #0FC1A7;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* line 279, src/sass/pages/_team.scss */
+.team-title {
+  margin-bottom: 15px;
+}
+
+/* line 285, src/sass/pages/_team.scss */
+.team-description {
+  font-size: 14px;
+  color: #353E3D;
+  line-height: 18px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+/* line 293, src/sass/pages/_team.scss */
+.team-price {
+  margin-bottom: 20px;
+}
+
+/* line 296, src/sass/pages/_team.scss */
+.team-price-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 300, src/sass/pages/_team.scss */
+.team-price-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 304, src/sass/pages/_team.scss */
+.team-price-item + .team-price-item {
+  margin-left: 25px;
+}
+
+/* line 309, src/sass/pages/_team.scss */
+.team-price-icon {
+  margin-right: 10px;
+  fill: #0FC1A7;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 316, src/sass/pages/_team.scss */
+.team-price-count {
+  font-size: 16px;
+  color: #353E3D;
+  font-weight: 600;
+}
+
+/* line 323, src/sass/pages/_team.scss */
+.team-tags {
+  margin-bottom: 40px;
+}
+
+/* line 326, src/sass/pages/_team.scss */
+.team-tags-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 331, src/sass/pages/_team.scss */
+.team-tags-item {
+  background: #F9F9FE;
+  margin-bottom: 20px;
+}
+
+/* line 335, src/sass/pages/_team.scss */
+.team-tags-item + .team-tags-item {
+  margin-left: 5px;
+}
+
+/* line 340, src/sass/pages/_team.scss */
+.team-tags-link {
+  color: #353E3D;
+  opacity: 0.6;
+  font-size: 13px;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  padding: 5px;
+}
+
+/* line 347, src/sass/pages/_team.scss */
+.team-tags-link:hover {
+  opacity: 1;
 }

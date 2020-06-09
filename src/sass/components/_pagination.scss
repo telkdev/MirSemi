@@ -1,0 +1,33 @@
+.pagination {
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        @include size(40px);
+
+        display: flex;
+        border: 1px solid $grey04;
+        background: $white01;
+        transition: background-color $animation-speed, color $animation-speed;
+
+        &.act, &:hover {
+            
+            background: $green01;
+
+            & > .pagination-link {
+                color: $white01;
+            }
+        }
+
+        & + & {
+            margin-left: 10px;
+        }
+    }
+
+    &-link {
+        margin: auto;
+        font-size: 13px;
+        color: $black01;
+    }
+}

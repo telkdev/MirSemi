@@ -5,13 +5,14 @@
     border: 1px solid $grey03;
     color: $black01;
     transition: border $animation-speed;
+    background: $white01;
 
     &::placeholder {
         color: $black01-opacity;
     }
 
     &:hover,
-    &:focus {
+    &:focus { 
         border-color: $blue01;
     }
 }

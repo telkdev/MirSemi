@@ -1,3 +1,6 @@
+const svgSprite = require("gulp-svg-sprite");
+
+
 /**
  * Settings
  * Turn on/off build features
@@ -220,7 +223,15 @@ var buildSVGs = function (done) {
 
 	// Optimize SVG files
 	return src(paths.svgs.input)
-		.pipe(svgmin())
+		.pipe( svgSprite(
+            {
+                mode: {
+                    symbol: {
+                        sprite: "../sprite.svg"
+                    }
+                }
+            }
+        ).on('error', e => console.log(e, 22222)),)
 		.pipe(dest(paths.svgs.output));
 
 };
