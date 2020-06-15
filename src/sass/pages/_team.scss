@@ -174,29 +174,6 @@
             max-width: 265px;
             margin-bottom: 10px;
             overflow: hidden;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                display: none;
-            }
-
-            &:hover,
-            &.act {
-
-                &>.team-socials {
-                    margin-top: -70px;
-                }
-
-                &::after {
-                    display: block;
-                }
-            }
         }
     }
 
@@ -274,6 +251,7 @@
         color: $green01;
         font-size: 13px;
         margin-bottom: 10px;
+        display: inline-block;
     }
 
     &-title {
