@@ -166,7 +166,6 @@
 /* line 12, src/sass/custom/_button.scss */
 .team-submit:hover, .team-link:hover, .team-submit:active, .team-link:active, .team-submit:focus, .team-link:focus {
   background: #0FC1A7;
-  border-color: #353E3D;
   color: #ffffff;
 }
 
@@ -733,7 +732,7 @@ input {
 
 /* line 1, src/sass/layout/_banner.scss */
 .banner {
-  background: url("/images/banner.png") center/cover no-repeat;
+  background: url("images/banner.png") center/cover no-repeat;
   position: relative;
 }
 
@@ -763,16 +762,21 @@ input {
   font-size: 50px;
   color: #ffffff;
   font-weight: 400;
+  position: relative;
+  padding-left: 35px;
 }
 
-/* line 29, src/sass/layout/_banner.scss */
+/* line 31, src/sass/layout/_banner.scss */
 .banner-title::before {
   content: '';
-  margin-right: 30px;
   width: 4px;
   background: #0FC1A7;
   height: 70px;
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* line 4, src/sass/pages/_team.scss */
@@ -945,29 +949,7 @@ input {
   overflow: hidden;
 }
 
-/* line 178, src/sass/pages/_team.scss */
-.team-image-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-/* line 192, src/sass/pages/_team.scss */
-.team-image-wrapper:hover > .team-socials, .team-image-wrapper.act > .team-socials {
-  margin-top: -70px;
-}
-
-/* line 196, src/sass/pages/_team.scss */
-.team-image-wrapper:hover::after, .team-image-wrapper.act::after {
-  display: block;
-}
-
-/* line 203, src/sass/pages/_team.scss */
+/* line 180, src/sass/pages/_team.scss */
 .team-socials {
   position: absolute;
   top: 100%;
@@ -979,7 +961,7 @@ input {
   transition: margin 0.25s linear;
 }
 
-/* line 211, src/sass/pages/_team.scss */
+/* line 188, src/sass/pages/_team.scss */
 .team-socials-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -989,12 +971,12 @@ input {
           align-items: center;
 }
 
-/* line 217, src/sass/pages/_team.scss */
+/* line 194, src/sass/pages/_team.scss */
 .team-socials-item + .team-socials-item {
   margin-left: 15px;
 }
 
-/* line 222, src/sass/pages/_team.scss */
+/* line 199, src/sass/pages/_team.scss */
 .team-socials-link {
   width: 44px;
   height: 44px;
@@ -1009,27 +991,27 @@ input {
   display: flex;
 }
 
-/* line 230, src/sass/pages/_team.scss */
+/* line 207, src/sass/pages/_team.scss */
 .team-socials-link:hover {
   opacity: 1;
 }
 
-/* line 234, src/sass/pages/_team.scss */
+/* line 211, src/sass/pages/_team.scss */
 .team-socials-link:hover > .socials-icon {
   opacity: 0.25;
 }
 
-/* line 239, src/sass/pages/_team.scss */
+/* line 216, src/sass/pages/_team.scss */
 .team-socials-icon {
   fill: #ffffff;
 }
 
-/* line 244, src/sass/pages/_team.scss */
+/* line 221, src/sass/pages/_team.scss */
 .team-stats {
   padding: 0 20px;
 }
 
-/* line 247, src/sass/pages/_team.scss */
+/* line 224, src/sass/pages/_team.scss */
 .team-stats-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1041,7 +1023,7 @@ input {
       flex-wrap: wrap;
 }
 
-/* line 253, src/sass/pages/_team.scss */
+/* line 230, src/sass/pages/_team.scss */
 .team-stats-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1053,14 +1035,14 @@ input {
   text-align: center;
 }
 
-/* line 259, src/sass/pages/_team.scss */
+/* line 236, src/sass/pages/_team.scss */
 .team-stats-key {
   color: #353E3D;
   opacity: 0.6;
   font-size: 13px;
 }
 
-/* line 265, src/sass/pages/_team.scss */
+/* line 242, src/sass/pages/_team.scss */
 .team-stats-value {
   font-size: 16px;
   line-height: 26px;
@@ -1068,19 +1050,20 @@ input {
   font-weight: 600;
 }
 
-/* line 273, src/sass/pages/_team.scss */
+/* line 250, src/sass/pages/_team.scss */
 .team-position {
   color: #0FC1A7;
   font-size: 13px;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
-/* line 279, src/sass/pages/_team.scss */
+/* line 257, src/sass/pages/_team.scss */
 .team-title {
   margin-bottom: 15px;
 }
 
-/* line 285, src/sass/pages/_team.scss */
+/* line 263, src/sass/pages/_team.scss */
 .team-description {
   font-size: 14px;
   color: #353E3D;
@@ -1089,19 +1072,19 @@ input {
   opacity: 0.7;
 }
 
-/* line 293, src/sass/pages/_team.scss */
+/* line 271, src/sass/pages/_team.scss */
 .team-price {
   margin-bottom: 20px;
 }
 
-/* line 296, src/sass/pages/_team.scss */
+/* line 274, src/sass/pages/_team.scss */
 .team-price-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 300, src/sass/pages/_team.scss */
+/* line 278, src/sass/pages/_team.scss */
 .team-price-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1111,12 +1094,12 @@ input {
           align-items: center;
 }
 
-/* line 304, src/sass/pages/_team.scss */
+/* line 282, src/sass/pages/_team.scss */
 .team-price-item + .team-price-item {
   margin-left: 25px;
 }
 
-/* line 309, src/sass/pages/_team.scss */
+/* line 287, src/sass/pages/_team.scss */
 .team-price-icon {
   margin-right: 10px;
   fill: #0FC1A7;
@@ -1124,19 +1107,19 @@ input {
   height: 15px;
 }
 
-/* line 316, src/sass/pages/_team.scss */
+/* line 294, src/sass/pages/_team.scss */
 .team-price-count {
   font-size: 16px;
   color: #353E3D;
   font-weight: 600;
 }
 
-/* line 323, src/sass/pages/_team.scss */
+/* line 301, src/sass/pages/_team.scss */
 .team-tags {
   margin-bottom: 40px;
 }
 
-/* line 326, src/sass/pages/_team.scss */
+/* line 304, src/sass/pages/_team.scss */
 .team-tags-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1145,18 +1128,18 @@ input {
       flex-wrap: wrap;
 }
 
-/* line 331, src/sass/pages/_team.scss */
+/* line 309, src/sass/pages/_team.scss */
 .team-tags-item {
   background: #F9F9FE;
   margin-bottom: 20px;
 }
 
-/* line 335, src/sass/pages/_team.scss */
+/* line 313, src/sass/pages/_team.scss */
 .team-tags-item + .team-tags-item {
   margin-left: 5px;
 }
 
-/* line 340, src/sass/pages/_team.scss */
+/* line 318, src/sass/pages/_team.scss */
 .team-tags-link {
   color: #353E3D;
   opacity: 0.6;
@@ -1166,7 +1149,7 @@ input {
   padding: 5px;
 }
 
-/* line 347, src/sass/pages/_team.scss */
+/* line 325, src/sass/pages/_team.scss */
 .team-tags-link:hover {
   opacity: 1;
 }

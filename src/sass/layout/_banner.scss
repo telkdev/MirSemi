@@ -25,15 +25,20 @@
         font-size: 50px;
         color: $white01;
         font-weight: 400;
+        position: relative;
+        padding-left: 35px;
 
         &::before {
             content: '';
 
-            margin-right: 30px;
+            
             width: 4px;
             background: $green01;
             height: 70px;
-            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }
