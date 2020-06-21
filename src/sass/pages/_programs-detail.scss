@@ -1,0 +1,140 @@
+.program {
+    @extend %content;
+
+    &-inner {
+        @include site-width;
+
+        padding: 20px 15px 40px;
+    }
+
+    &-main_title {
+        @extend %main-heading;
+
+        margin-bottom: 40px;
+    }
+
+    &-header {
+        @extend %detail-header;
+
+        margin-bottom: 40px;
+
+        &-stats {
+            @extend %detail-header-stats;
+
+            &-list {
+                @extend %detail-header-stats-list;
+            }
+
+            &-item {
+                @extend %detail-header-stats-item;
+            }
+
+            &-key {
+                @extend %detail-text;
+            }
+
+            &-value {
+                @extend %detail-header-stats-value;
+            }
+
+            &-text {
+                @extend %detail-subtitle;
+            }
+        }
+    }
+
+    &-author {
+        @extend %detail-author;
+
+        &-image {
+            &-wrapper {
+                @extend %detail-author-image-wrapper;
+            }
+        }
+
+        &-position {
+            @extend %detail-text;
+        }
+
+        &-name {
+            @extend %detail-subtitle;
+        }
+    }
+
+    &-price {
+        @extend %detail-price;
+    }
+
+    &-link {
+        @extend %detail-link;
+    }
+
+    &-image {
+        &-wrapper {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-info {
+        display: flex;
+    }
+
+    &-details {
+        @extend %main;
+    }
+
+    &-title {
+        font-size: 25px;
+        color: $black01;
+        line-height: 33px;
+        margin-bottom: 10px;
+    }
+
+    &-description {
+        font-size: 16px;
+        line-height: 26px;
+        color: $black02;
+
+        & + & {
+            margin-top: 30px;
+        }
+    }
+
+    &-tags {
+        @extend %gallery_row-tags;
+
+        margin-top: 20px;
+
+        &-list {
+            @extend %gallery_row-tags-list;
+        }
+
+        &-item {
+            @extend %gallery_row-tags-item;
+        }
+
+        &-link {
+            @extend %gallery_row-tags-link;
+        }
+    }
+
+    &-stats {
+        @extend %detail-stats;
+
+        &-item {
+            @extend %detail-stats-item;
+        }
+
+        &-icon {
+            @extend %detail-stats-icon;
+        }
+
+        &-key {
+            @extend %detail-stats-key;
+        }
+        &-value {
+            @extend %detail-stats-value;
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+.filter {
+    margin-bottom: 40px;
+
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        & + & {
+            margin-left: 35px;
+        }
+    }
+
+    &-link {
+        position: relative;
+        font-size: 13px;
+        color: $black01;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 0;
+            right: 0;
+            top: 100%;
+            margin-top: 10px;
+            border-bottom: 2px solid $green01;
+        }
+
+        &.act {
+            &::after {
+                display: block;
+            }
+        }
+    }
+}

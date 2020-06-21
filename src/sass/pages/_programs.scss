@@ -1,0 +1,242 @@
+.programs {
+    @extend %content;
+
+    &-inner {
+        @include site-width;
+
+        padding: 20px 15px 155px;
+    }
+
+    &-content {
+        @extend %content-inner;
+    }
+
+    &-main {
+        @extend %main;
+    }
+
+    &-header {
+        @extend %content_header;
+
+        &-icon {
+            @extend %content_header-icon;
+        }
+
+        &-actions {
+            @extend %content_header-actions;
+        }
+
+        &-text {
+            @extend %content_header-text;
+        }
+    }
+
+    &-count {
+        &-text {
+            @extend %count_text;
+        }
+    }
+
+    &-select {
+        margin-right: 20px;
+    }
+
+    // ASIDE
+    &-filter {
+        @extend %filter;
+    }
+
+    &-form {
+        &-title {
+            @extend %title;
+
+            padding-right: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-radio {
+        &-wrapper {
+            //ext
+            margin-bottom: 30px;
+        }
+
+        &-field {
+            @extend %radio-field;
+        }
+
+        &-label {
+            @extend %radio-label;
+        }
+
+        &-input {
+            @extend %radio;
+        }
+
+        &-title {
+            @extend %title;
+
+            margin-bottom: 25px;
+        }
+    }
+
+    &-checkbox {
+        &-wrapper {
+            //ext
+            margin-bottom: 30px;
+        }
+
+        &-field {
+            @extend %checkbox-field;
+        }
+
+        &-label {
+            @extend %checkbox-label;
+        }
+
+        &-input {
+            @extend %checkbox;
+        }
+
+        &-title {
+            @extend %title;
+
+            margin-bottom: 25px;
+        }
+    }
+
+    &-submit {
+        @extend %button;
+    }
+
+    // Main list
+    &-list {
+        @extend %gallery-list;
+    }
+
+    &-item {
+        @extend %gallery-item;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(4n) {
+            margin-right: 35px;
+        }
+    }
+
+    &-image {
+        &-wrapper {
+            @extend %gallery-image-wrapper;
+        }
+    }
+
+    &-info {
+        @extend %gallery-info;
+
+        text-align: center;
+    }
+
+    &-title {
+        @extend %gallery-title;
+    }
+
+    &-stats {
+        &-text {
+            @extend %gallery-text;
+        }
+    }
+
+    &-link {
+        @extend %gallery-link;
+    }
+
+    &-label {
+        @extend %gallery-label;
+
+        &-text {
+            @extend %gallery-label-text;
+        }
+
+        &--old {
+            @extend %gallery-label--old;
+        }
+    }
+
+    &-stats {
+        &-list {
+            @extend %gallery-stats-list;
+        }
+    }
+
+    &-position {
+        @extend %gallery_row-position;
+    }
+
+    &-tags {
+        @extend %gallery_row-tags;
+
+        &-list {
+            @extend %gallery_row-tags-list;
+        }
+
+        &-item {
+            @extend %gallery_row-tags-item;
+        }
+
+        &-link {
+            @extend %gallery_row-tags-link;
+        }
+    }
+
+    &-features {
+        margin-bottom: 20px;
+
+        &-list {
+            @extend %gallery_row-features-list;
+        }
+
+        &-item {
+            @extend %gallery_row-features-item;
+
+        }
+
+        &-icon {
+            @extend %gallery_row-features-icon;
+
+        }
+
+        &-text {
+            @extend %gallery_row-features-text;
+        }
+    }
+
+    &-description {
+        @extend %gallery_row-description;
+    }
+
+    &-detailed {
+        &-item {
+            @extend %gallery_row-item;
+        }
+
+        &-item {
+            @extend %gallery_row-item;
+        }
+
+        &-info {
+            @extend %gallery_row-hero;
+        }
+
+        &-image {
+            &-wrapper {
+                @extend %gallery_row-image-wrapper;
+            }
+        }
+
+        &-link {
+            @extend %button;
+        }
+    }
+}

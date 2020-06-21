@@ -8,65 +8,46 @@
     }
 
     &-content {
-        display: flex;
+        @extend %content-inner;
     }
 
     &-main {
-        max-width: 870px;
-        width: 100%;
-        margin-right: 35px;
-    }
-
-    &-filter {
-        max-width: 265px;
-        width: 100%;
-        align-self: baseline;
+        @extend %main;
     }
 
     &-header {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        background: rgb(249, 249, 254);
-        margin-bottom: 60px;
+        @extend %content_header;
 
         &-icon {
-            margin-right: 20px;
+            @extend %content_header-icon;
         }
 
         &-actions {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
+            @extend %content_header-actions;
         }
 
         &-filter {
-            margin-right: 20px;
+            @extend %content_header-filter;
 
             &-wrapper {
-                display: flex;
+                @extend %content_header-filter-wrapper;
             }
         }
 
         &-text {
-            font-size: 13px;
-            color: $grey02;
-            margin-right: 10px;
+            @extend %content_header-text;
         }
     }
 
     &-count {
         &-text {
-            color: $grey02;
-            font-size: 13px;
-            opacity: 0.6;
+            @extend %count_text;
         }
     }
 
     // ASIDE
     &-filter {
-        padding: 15px 15px 35px;
-        border: 1px solid $grey03;
+        @extend %filter;
     }
 
     &-form {
@@ -99,10 +80,8 @@
                 margin-top: 30px;
             }
 
-            &--last {
-                padding-bottom: 15px;
-                border-bottom: 1px solid $grey04;
-                margin-bottom: 25px;
+            &--border {
+                @extend %action_field--border;
             }
         }
 
@@ -155,25 +134,16 @@
 
     // ITEM
     &-item {
-        padding: 40px 0 30px;
-        display: flex;
-
-        &+& {
-            border-top: 1px solid $grey04;
-        }
+       @extend %gallery_row-item;
     }
 
     &-info {
-        flex-shrink: 0;
-        margin-right: 35px;
+        @extend %gallery_row-hero;
     }
 
     &-image {
         &-wrapper {
-            position: relative;
-            max-width: 265px;
-            margin-bottom: 10px;
-            overflow: hidden;
+            @extend %gallery_row-image-wrapper;
         }
     }
 
@@ -248,10 +218,7 @@
     }
 
     &-position {
-        color: $green01;
-        font-size: 13px;
-        margin-bottom: 10px;
-        display: inline-block;
+        @extend %gallery_row-position;
     }
 
     &-title {
@@ -261,11 +228,7 @@
     }
 
     &-description {
-        font-size: 14px;
-        color: $black01;
-        line-height: 18px;
-        margin-bottom: 15px;
-        opacity: 0.7;
+        @extend %gallery_row-description;
     }
 
     &-price {
@@ -299,32 +262,18 @@
     }
 
     &-tags {
-        margin-bottom: 40px;
+        @extend %gallery_row-tags;
 
         &-list {
-            display: flex;
-            flex-wrap: wrap;
+            @extend %gallery_row-tags-list;
         }
 
         &-item {
-            background: $grey01;
-            margin-bottom: 20px;
-
-            & + & {
-                margin-left: 5px;
-            }
+            @extend %gallery_row-tags-item;
         }
 
         &-link {
-            color: $black01;
-            opacity: 0.6;
-            font-size: 13px;
-            transition: opacity $animation-speed;
-            padding: 5px;
-
-            &:hover {
-                opacity: 1;
-            }
+            @extend %gallery_row-tags-link;
         }
     }
 

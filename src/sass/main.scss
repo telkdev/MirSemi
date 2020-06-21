@@ -20,9 +20,17 @@
 @import 'components/breadcrumbs';
 @import 'components/search';
 @import 'components/pagination';
+@import 'components/similar';
+@import 'components/reviews';
+@import 'components/videos';
+@import 'components/filter';
 
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/banner';
 
 @import 'pages/team';
+@import 'pages/about-us';
+@import 'pages/programs';
+@import 'pages/programs-detail';
+@import 'pages/events';

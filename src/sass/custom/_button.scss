@@ -16,3 +16,22 @@
         color: $white01;
     }
 }
+
+@mixin button($padding: 0 65px, $line-height: 38px) {
+    border: 1px solid $green01;
+    border-radius: 10px;
+    line-height: $line-height;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $grey02;
+    letter-spacing: 0.33px;
+    padding: $padding;
+    transition: color $animation-speed, border $animation-speed, background-color $animation-speed;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $green01;
+        color: $white01;
+    }
+}

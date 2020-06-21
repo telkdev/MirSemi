@@ -1,0 +1,67 @@
+.similar {
+    background: $grey01;
+
+    &-inner {
+        @include site-width;
+
+        padding: 65px 15px;
+    }
+
+    &-main_title {
+        @extend %main-heading;
+
+        margin-bottom: 40px;
+    }
+
+    &-list {
+        display: flex;
+    }
+
+    &-item {
+        @extend %gallery-item;
+    }
+
+    &-image {
+        &-wrapper {
+            @extend %gallery-image-wrapper;
+        }
+    }
+
+    &-info {
+        @extend %gallery-info;
+
+        text-align: center;
+    }
+
+    &-title {
+        @extend %gallery-title;
+    }
+
+    &-stats {
+        &-text {
+            @extend %gallery-text;
+        }
+    }
+
+    &-link {
+        @extend %gallery-link;
+    }
+
+    &-label {
+        @extend %gallery-label;
+
+        &-text {
+            @extend %gallery-label-text;
+        }
+
+        &--old {
+            @extend %gallery-label--old;
+        }
+    }
+
+    &-stats {
+        &-list {
+            @extend %gallery-stats-list;
+        }
+    }
+}
